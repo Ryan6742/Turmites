@@ -1,0 +1,3 @@
+An implementation of Turmites combined with the changing environment of Conway's Game of Life. Some code snippets can be/have been edited out to be able to view the Turmites without the Game of Life running underneath it. 
+
+Requires pygame.
