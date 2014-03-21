@@ -97,12 +97,12 @@ def Step(grid):     # Updates Screen, Values, and Grid, according to Conway's Ga
                               #and checks if it is alive
                               # Then adds one to neigbor if True
 
-               #if x[1][c]: #Checks to see if node lives on #Add this code back in if
-                    #if n < 2 or n > 3:                     #you want the Game of Life
-                         #x[1][not(c)] = 0                  #to run along with the
-               #else:       #Checks to see if node is born  #Turmites. 
-                    #if n == 3:
-                         #x[1][not(c)] = 1
+               if x[1][c]: #Checks to see if node lives on #Add this code back in if
+                    if n < 2 or n > 3:                     #you want the Game of Life
+                         x[1][not(c)] = 0                  #to run along with the
+               else:       #Checks to see if node is born  #Turmites. 
+                    if n == 3:
+                         x[1][not(c)] = 1
 
                if x[1][not(c)]:
                     pygame.draw.rect(screen, (0, 0, 0), (x[0]*3, y[0]*3, 2, 2))
@@ -111,7 +111,7 @@ def Step(grid):     # Updates Screen, Values, and Grid, according to Conway's Ga
      grid[0] = c
 
 grid = [0,
-        [[[0 , 0] #[[[choice([0, 1]), 0]
+        [[[choice([0]*10+[1]), 0]
           for x in xrange(100)]
          for y in xrange(100)]]
 
